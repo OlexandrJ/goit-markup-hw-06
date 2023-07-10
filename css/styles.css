@@ -887,6 +887,10 @@ input:not ([type="checkbox"]) {
     margin-bottom: 24px;
 }
 
+.accept-input:focus {
+    outline: 2px solid #9747FF;
+}
+
 .user-privacy-label {
     font-size: 12px;
     line-height: 1.17;
@@ -915,10 +919,6 @@ input:not ([type="checkbox"]) {
     fill: #f4f4fd;
     background-color: #404bbf;
     border: none;
-}
-
-.footer-sub {
-    
 }
 
 .footer-sub-title {
