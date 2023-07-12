@@ -982,7 +982,7 @@ input:not ([type="checkbox"]) {
 /* CHECKBOX */
 
 /* .accept-input:focus + .accept-input::after {
-    /* border-color: 2px solid #4D5AE5; */
+    border-color: 2px solid #4D5AE5;
     outline: 2px solid #404bbf;
 } */
 
