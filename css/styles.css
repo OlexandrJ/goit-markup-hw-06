@@ -39,6 +39,7 @@ img {
     display: block;
 }
 
+/* Приховати заголовки */
 .visually-hidden {
         position: absolute;
         width: 1px;
@@ -70,7 +71,6 @@ img {
     display: flex;
     align-items: center;
     font-family: "Raleway", sans-serif;
-    font-weight: 800;
     font-weight: 800;
     font-size: 18px;
     line-height: 1.17;
@@ -119,9 +119,8 @@ img {
 .nav { 
     padding-top: 25.5px;
     padding-bottom: 23.5px;
-
-    /* display: flex;
-    align-items: center; */
+    display: flex;
+    align-items: center;
 }
 
 
@@ -1005,7 +1004,7 @@ input:not ([type="checkbox"]) {
 }
 
 .span-privacy-label:focus {
-    outline: 2px solid #9747FF;
+    outline: 2px solid #404bbf;
 }
 
 .privacy-policy-link {
