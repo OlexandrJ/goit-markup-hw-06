@@ -1004,6 +1004,10 @@ input:not ([type="checkbox"]) {
     fill: transparent;
 }
 
+.span-privacy-label:focus {
+    outline: 2px solid #9747FF;
+}
+
 .privacy-policy-link {
     color: #4d5ae5;
 }
