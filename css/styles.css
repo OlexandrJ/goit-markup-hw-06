@@ -204,7 +204,7 @@ img {
 
 .container {
     min-width: 320px;
-    max-width: 396px;
+    max-width: 428px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 16px;
@@ -459,8 +459,7 @@ img {
 
 .team {
     background-color: #F4F4FD;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-bottom: 96px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
         0px 1px 1px rgba(46, 47, 66, 0.16),
         0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -476,13 +475,30 @@ img {
         text-transform: capitalize;
         color: #2E2F42;
         margin-bottom: 72px;
+        padding-top: 96px;
+}
+
+@media only screen and (min-width: 1158px) {
+    .team {
+        padding-bottom: 120px;
+    }
+
+    .team-title {
+        padding-top: 120px;
+    }
 }
 
 .team-list {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 767px) {
+    .team-list {
+        gap: 72px;
+    }
 }
 
 .team-item {
@@ -765,10 +781,17 @@ img {
     border: 1px solid transparent;
 }
 
+/* CLIENTS */
+
 .clients {
     background: #FFF;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-bottom: 96px;
+}
+
+@media only screen and (min-width: 1158px) {
+    .clients {
+        padding-bottom: 120px;
+    }
 }
 
 .clients-title {
@@ -782,13 +805,53 @@ img {
         text-transform: capitalize;
         margin-bottom: 72px;
         line-height: 1.11;
+        padding-top: 96px;
 }
 
 .clients-list {
-display: flex;
-justify-content: center;
-gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 72px;
+    column-gap: 16px;
+    margin: 0 auto;
 }
+
+.clients-item {
+    flex-basis: calc((100% - 16px) / 2);
+    height: 88px;
+}
+
+@media (min-width: 768px) and (max-width: 1158px) {
+    .clients-list {
+        max-width: 552px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .clients-list {
+        column-gap: 24px;
+    }
+
+    .clients-item {
+        flex-basis: calc((100% - 48px) / 3);
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .clients-list {
+        gap: 24px;
+    }
+
+    .clients-item {
+        flex-basis: calc((100% - 120px) / 6);
+    }
+}
+
+
+
+
+
 
 .link-apps {
     display: block;
@@ -805,7 +868,7 @@ gap: 24px;
 display: flex;
 justify-content: center;
 align-items: center;
-width: 168px;
+width: auto;
 height: 88px;
 border-radius: 4px;
 border: 1px solid var(--lightslate, #8E8F99);
@@ -830,8 +893,6 @@ transition-duration: 250ms;
 
 .clients-icon {
     fill: currentColor;
-    width: 104px;
-    height: 56px;
 }
 
 .backdrop {
@@ -1128,10 +1189,24 @@ input:not ([type="checkbox"]) {
     stroke: #2E2F42;
 }
 
-.menu-toggle-x {
-    border: 1px;
-    border-color: #434455;
-    border-radius: 50%;
+.menu-toggle-close {
+    position: absolute;
+        top: 24px;
+        right: 24px;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--main-white);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 0;
+        cursor: pointer;
+}
+
+.close-button {
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .menu-container {
@@ -1166,14 +1241,9 @@ input:not ([type="checkbox"]) {
 .mobile-menu {
     display: inline-flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 40px;
     margin-bottom: auto;
 }
-
-/* .mobile-menu.active::after {
-    color: #404BBF;
-} */
 
 .mobile-menu-item {
 
@@ -1181,13 +1251,16 @@ input:not ([type="checkbox"]) {
 
 .mobile-menu-link {
     color: #2E2F42;
-    font-family: Roboto;
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
-    line-height: 40px;
+    line-height: 1.11;
     letter-spacing: 0.72px;
     text-transform: capitalize;
+}
+
+.is-active {
+    color: #404BBF;
 }
 
 .mobile-adress {
@@ -1201,7 +1274,7 @@ input:not ([type="checkbox"]) {
 .mobile-adress-link-tel {
     color: #4D5AE5;
     font-family: Roboto;
-    font-size: 36px;
+    font-size: 28px;
     font-style: normal;
     font-weight: 700;
     line-height: 40px;
@@ -1220,7 +1293,16 @@ input:not ([type="checkbox"]) {
 }
 
 .mobile-soc-meregi {
-    display: inline-flex;
-    align-items: flex-start;
+    display: flex;
     gap: 56px;
+}
+
+.mobile-soc-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #4D5AE5;
 }
