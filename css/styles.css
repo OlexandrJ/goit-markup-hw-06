@@ -158,12 +158,6 @@ img {
     font-style: normal;
 }
 
-/* .header-adress {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-} */
-
 @media only screen and (max-width: 767px) {
     .header-adress {
         display: none;
@@ -234,29 +228,90 @@ img {
 
 .hero {
     background-color: #2E2F42;
-    padding-top: 188px;
-    padding-bottom: 188px;
+    padding: 112px 0;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/Hero/people-offic_mobile@1x.jpg);
     max-width: 1440px;
-    margin-right: auto;
-        margin-left: auto;
+    margin: 0 auto;
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+    .hero {
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/Hero/people-offic_mobile@2x.jpg);
+    }
+}
+
+@media only screen and (min-width: 429px) {
+    .hero {
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/Hero/people-offic_table@1x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/Hero/people-offic_table@2x.jpg);
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .hero {
+        background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url(../images/Hero/people-office_desk@1x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/Hero/people-office_desk@2x.jpg);
+        }
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .hero {
+        padding: 188px 0;
+    }
 }
 
 .hero-title {
-    font-family: 'Roboto';
     font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
+    font-size: 36px;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     text-align: center;
     color: #FFFFFF;
-    max-width: 496px;
+    max-width: 320px;
     margin: 0 auto;
-    margin-bottom: 48px;
+    margin-bottom: 72px;
 }
+
+@media only screen and (min-width: 768px) {
+    .hero-title {
+        font-size: 56px;
+        line-height: 1.07;
+        letter-spacing: 1.12px;
+        margin-bottom: 36px;
+        max-width: 496px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .hero-title {
+        margin-bottom: 48px;
+    }
+}
+
 
 .hero-btn {
     font-family: "Roboto", sans-serif;
@@ -1103,6 +1158,23 @@ transition-duration: 250ms;
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
     padding: 72px 24px 24px 24px;
 }
+
+@media only screen and (min-width: 768px) {
+    .modal {
+        width: 408px;
+        padding: 72px 24px 24px;
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .modal {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+            0px 2px 1px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
 
 .modal-btn {
     display: flex;
