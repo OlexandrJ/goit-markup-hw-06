@@ -471,7 +471,7 @@ img {
     color: #2E2F42;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 427.98px) {
+@media only screen and (min-width: 320px) and (max-width: 767.98px) {
 .advantages-title {
     text-align: center;
     font-size: 36px;
